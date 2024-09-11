@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    margin-left: 220px;
+    margin-top:80px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    min-height: 100vh;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    width: 100%;
+}
