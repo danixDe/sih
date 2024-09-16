@@ -1,12 +1,11 @@
 .x {
-    background-color: white;
+    background-color: white; /* Slightly lighter dark color for contrast */
     width: 100%;
     display: flex;
     position: fixed;
     top: 0;
     z-index: 100;
-    padding: 10px 15px;
-    white-space: nowrap;
+    padding: 0px 20px;
     justify-content: space-between;
     align-items: center;
     box-shadow: 
@@ -15,10 +14,10 @@
 }
 
 .name {
-    font-weight: 800;
-    color: black;
+    font-weight: 600;
+    color: crimson;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-left: 10px;
     cursor: pointer;
 }
@@ -27,11 +26,12 @@
     display: flex;
     align-items: center;
     gap: 16px;
+    margin-right:30px;
 }
 
 .postbtn {
-    background-color: rgba(210, 216, 234, 0.7);
-    color: #333;
+    background-color: crimson;
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 8px;
     transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out, background-color 0.25s ease-in-out;
@@ -39,7 +39,9 @@
     font-weight: 500;
     display: flex;
     align-items: center;
-    margin-right:20px;
+    border: none;
+    text-align: center;
+    text-decoration:none;
 }
 
 .postbtn:hover {
@@ -49,6 +51,20 @@
 
 .postbtn:active {
     transform: rotate(0deg) translateY(0px) scale(0.95);
-    background-color: rgba(111, 88, 201, 0.7);
+    background-color: #b71c1c;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #020202;
+    margin-right: 20px;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
 }
