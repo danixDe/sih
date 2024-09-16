@@ -1,39 +1,72 @@
 import './login.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,Link} from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
 
 function Login() {
   const navigate = useNavigate();
-  function handleLogin(){
-    navigate('/');
-
+  function handleLogin(e) {
+    e.preventDefault();
+    console.log(credentials);
+    navigate('/'); 
   }
 
+  const [user, setUser] = useState('student');
+  const studentBtn = useRef(null);
+  const alumniBtn = useRef(null);
+  const [showPassword, setShowPassword] = useState(false); 
+  const [credentials,setCredentials]=useState({user:"",email:"",password:""});
+  useEffect(() => {
+    if (user === 'student') {
+      studentBtn.current.style.backgroundColor = 'rgb(46, 115, 143)';
+      alumniBtn.current.style.backgroundColor = 'rgb(142, 193, 213)';
+    } else {
+      studentBtn.current.style.backgroundColor = 'rgb(142, 193, 213)';
+      alumniBtn.current.style.backgroundColor = 'rgb(46, 115, 143)';
+    }
+    setCredentials({...credentials,user:user});
+  }, [user]);
+
   return (
-    <div className='login-page'>
+    <div className="login-page">
       <div className="container">
-        <h2>Login as alumni/user </h2>
-        <form>
+        <h2>{`Login as ${user}`}</h2>
+        <div id="userselectbox">
+          <button
+            id="studentBtn"
+            ref={studentBtn}
+            onClick={() => setUser('student')}
+          >
+            Student
+          </button>
+          <button
+            id="alumniBtn"
+            ref={alumniBtn}
+            onClick={() => setUser('alumni')}
+          >
+            Alumni
+          </button>
+        </div>
+        <form onSubmit={(e) => handleLogin(e)}>
           <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            required
-          />
+          <input type="email" id="email" required 
+          onChange={(e)=>setCredentials({...credentials,email:e.target.value})} />
           <label htmlFor="password">Password:</label>
           <input
-            type = 'text'
+            type={showPassword ? 'text' : 'password'}
             id="password"
             required
+            onChange={(e)=>setCredentials({...credentials,password:e.target.value})}
           />
-          <div className='sP'>
-            <input type="checkbox"/>
+          <div className="sP">
+            <input
+              type="checkbox"
+              onChange={() => setShowPassword(!showPassword)} 
+            />
             <label>Show Password</label>
           </div>
-          <button type="submit" onClick={handleLogin}>Login</button>
+          <button type="submit">Login</button>
         </form>
-        <p>
-          Dont have an account? Sign up
-        </p>
+        <a href="/signup">Don't have an account? Sign up</a>
       </div>
     </div>
   );
