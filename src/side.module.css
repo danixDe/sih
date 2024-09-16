@@ -1,32 +1,64 @@
+/* Sidebar Styling */
 .sidebar {
-    width: 220px;
-    margin-top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #020202;
+    color: #ecf0f1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    transform: translateX(-100%);
+    z-index: 10;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15); /* Adds a nice shadow */
+}
+
+.open {
+    transform: translateX(0);
+}
+
+.closed {
+    transform: translateX(-100%);
+}
+
+.hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 20px;
+    color: #ecf0f1;
+}
+
+/* Navigation Styling */
+.nav {
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 4.2em;
-    width: 200px;
-    height: 100vh;
-    background-color: white;
-    box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.1);
-    z-index: 99;
 }
 
-.feeda{
-    font-weight: 600;
+.feed {
+    padding: 15px 25px;
+    transition: background-color 0.2s ease;
+}
+
+/* Link Styling */
+.feeda {
     text-decoration: none;
-    color: hsla(0, 0%, 4%, 0.804);
+    color: #ecf0f1;
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: block;
+    transition: color 0.2s ease;
 }
 
-.feed{
-    font-size: 1.2em;
-    padding: 15px 20px;
-    margin-bottom: 5px;
-    align-items: center;
-    cursor: pointer;
-    transition: ease-in-out 0.1s;
+.feed:hover {
+    background-color: hsla(0, 0%, 50%,); /* Hover effect for the sidebar items */
 }
 
-.feed:hover{
-    background-color: rgba(210, 216, 234, 0.3);
+.feed:hover .feeda {
+    color: red; /* Change link color on hover */
+}
+@media (min-width: 760px) {
+    .sidebar {
+        transform: translateX(0) !important;
+    }
 }

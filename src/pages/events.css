@@ -1,0 +1,84 @@
+/* events.css */
+
+.events-container {
+    padding: 20px;
+    background-color: whitesmoke;
+    margin-top:50px;
+  }
+  
+  /* Hero Section */
+  .events-hero {
+    text-align: center;
+    background-color: crimson;
+    color: white;
+    padding: 50px 20px;
+  }
+  
+  .events-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .events-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Event Sections */
+  .upcoming-events, .past-events {
+    margin-top: 40px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Event Cards */
+  .events-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  }
+  
+  .event-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .event-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .event-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .event-btn {
+    background-color: crimson;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .event-btn:hover {
+    background-color: black;
+  }
+  
+  @media (max-width: 768px) {
+    .events-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

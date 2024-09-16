@@ -1,0 +1,23 @@
+/* layout.module.css */
+
+.container {
+    display: flex;
+  }
+  
+  .header {
+    /* Add styles for header */
+  }
+  
+  .sidebar {
+    /* Add styles for sidebar */
+  }
+  .content {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.3s;
+  }
+  
+  .withSidebar {
+    margin-left: 250px; /* Adjust according to the sidebar width */
+  }
+  

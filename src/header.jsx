@@ -1,15 +1,23 @@
 import styles from './head.module.css';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-function Header() {
+
+function Header({ toggleSidebar }) {
     return (
         <div className={styles.x}>
+            <div className={styles.hamburger} onClick={toggleSidebar}>
+                <FontAwesomeIcon icon={faBars} />
+            </div>
+
             <h1 className={styles.name}>AlumNet</h1>
             <div className={styles.actions}>
-                <Link to = '/login'className={styles.postbtn}>Login</Link>
+                <Link to='/login' className={styles.postbtn}>Login</Link>
                 <div className={styles.postbtn}>Signup</div>
             </div>
         </div>
     );
 }
+
 export default Header;
