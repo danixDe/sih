@@ -15,7 +15,6 @@ function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/events" element={<Events />} />
         <Route path="/mentorship" element={<Mentorship />} />
         <Route path="/about" element={<About />} />
@@ -23,6 +22,10 @@ function App() {
         <Route path="/signup" element={<Signup/>}/>
       </Routes>
     </Layout>
+    <Routes>
+    <Route path = '/signup' element = {<Signup />} />
+    <Route path="/login" element={<Login />} />
+    </Routes>
   </Router>
   );
 }

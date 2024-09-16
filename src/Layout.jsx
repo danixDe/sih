@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './header';
 import Sidebar from './sidebar';
-import styles from './layout.module.css'; // Adjust the path as needed
+import styles from './layout.module.css'; 
 
 const Layout = ({ children }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 760) {
-        setSidebarOpen(true); // Ensure the sidebar is open on large screens
+        setSidebarOpen(true); 
       }
     };
 
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
   return (
     <div className={styles.container}>
       <Header toggleSidebar={toggleSidebar} />
-      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+      <Sidebar isOpen={isSidebarOpen} />
       <main className={`${styles.content} ${isSidebarOpen ? styles.withSidebar : ''}`}>
         {children}
       </main>

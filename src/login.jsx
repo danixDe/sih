@@ -66,7 +66,7 @@ function Login() {
           </div>
           <button type="submit">Login</button>
         </form>
-        <a href="/signup">Don't have an account? Sign up</a>
+        <Link to= '/signup' >Dont have an account? Sign up</Link>
       </div>
     </div>
   );

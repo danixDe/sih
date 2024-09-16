@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Card from '../card';
 import styles from './home.module.css';
 
@@ -28,7 +28,6 @@ const Home = () => {
 
   return (
     <div className={styles.homeContainer}>
-      {/* Hero Section */}
       <div className={styles.heroSection}>
         <h1>Connect with Our Alumni</h1>
         <p>Find and connect with graduates who can guide and mentor you.</p>
@@ -41,7 +40,6 @@ const Home = () => {
         />
       </div>
 
-      {/* Featured Alumni Section */}
       <div className={styles.featuredAlumni}>
         <h2>Featured Alumni</h2>
         <div className={styles.cards}>
@@ -56,7 +54,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* All Alumni Section */}
       <div className={styles.allAlumni}>
         <h2>All Alumni</h2>
         <div className={styles.cards}>
