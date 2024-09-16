@@ -1,7 +1,7 @@
 .card {
     width: 270px;
     height: 400px;
-    background-color: white;
+    background-color: #fff; /* Card background color */
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -18,12 +18,12 @@
 
 .imagePlaceholder {
     height: 50%;
-    background-color: #e0e0e0;
+    background-color: gray; /* Placeholder background */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    color: #888;
+    color: #888; /* Placeholder text color */
 }
 
 .info {
@@ -39,16 +39,16 @@
     font-size: 1.4rem;
     font-weight: 600;
     margin: 10px 0;
-    color: #333;
+    color: #020202; /* Primary text color */
 }
 
 .occupation {
     font-size: 1.1rem;
-    color: #555;
+    color: #333; /* Secondary text color */
     margin: 5px 0;
 }
 
 .passoutYear {
     font-size: 1rem;
-    color: #777;
+    color: crimson; /* Accent color for passout year */
 }

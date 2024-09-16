@@ -43,7 +43,7 @@
 .featuredAlumni h2, .allAlumni h2 {
     margin-bottom: 20px;
     font-size: 2rem;
-    color: crimson; /* Crimson for headings */
+    color: #020202; /* Crimson for headings */
 }
 
 .cards {
