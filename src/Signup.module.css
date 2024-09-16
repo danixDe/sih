@@ -21,7 +21,7 @@ input,select:focus{
     flex-direction: column;
     overflow-y:hidden;
     padding-bottom:100px; 
-    background-color: rgb(45,45,45);
+    background-color: whitesmoke;
     width:100vw;
 }
 #signup-box{
@@ -64,7 +64,7 @@ input,select:focus{
     font-size:0.8rem;
     font-weight: 800;
 }
-#uname-box,#email-box,#pwd-box,#confirm-box{
+#uname-box,#email-box,#pwd-box,#confirm-box,#jobDescBox{
     width: 85%;
     display: flex;
     flex-direction: column;
@@ -78,7 +78,7 @@ input,select:focus{
     font-style: italic;
     display:none;
 }
-#uname-input,#email-input,#pwd-input,#confirm-input{
+#uname-input,#email-input,#pwd-input,#confirm-input,#jobDesc{
     font-size: 0.9rem;
     font-weight:700;
     font-style:oblique;
@@ -88,6 +88,16 @@ input,select:focus{
     background-color: transparent;
     border-radius: 10px;
     border:none;
+}
+#alumni{
+    width:85%;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+}
+#alumni div{
+    width:100%;
+    margin-bottom: 15px;
 }
 #mail-check,#pwd-match{
     color: whitesmoke;
@@ -222,4 +232,14 @@ input,select:focus{
 .socialicons a:hover {
     color: #da3238; 
 }
- 
+#userselectbox{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+  }
+  #studentBtn,#alumniBtn{
+    padding: 0.633rem;
+    border: none;
+    background-color: rgb(142, 193, 213);
+  }

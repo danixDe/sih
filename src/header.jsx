@@ -14,7 +14,7 @@ function Header({ toggleSidebar }) {
             <h1 className={styles.name}>AlumNet</h1>
             <div className={styles.actions}>
                 <Link to='/login' className={styles.postbtn}>Login</Link>
-                <div className={styles.postbtn}>Signup</div>
+                <Link to='/signup' className={styles.postbtn}>Sign Up</Link>
             </div>
         </div>
     );
