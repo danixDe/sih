@@ -23,7 +23,6 @@ const Mentorship = () => {
 
     const handleSendMessage = () => {
         if (selectedAlumni && message) {
-            // Here you would typically handle sending the message to the selected alumni
             alert(`Message sent to ${selectedAlumni.name}: ${message}`);
             setMessage("");
         }

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './side.module.css';
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+const Sidebar = ({ isOpen }) => {
   return (
     <div className={`${styles.sidebar} ${isOpen ? styles.open : styles.closed}`}>
       <br></br>

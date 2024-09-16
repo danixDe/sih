@@ -1,39 +1,40 @@
 .homeContainer {
     padding: 20px;
     background-color: #f4f4f4; 
-    margin-top:50px;
 }
 
 .heroSection {
     text-align: center;
-    background-color: crimson; /* Crimson background */
-    color: #fff; /* White text color */
+    background-color: inherit; 
+    color: #fff; 
     padding: 40px 20px;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px; 
 }
 
 .heroSection h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    color:black;
 }
 
 .heroSection p {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    color:black;
 }
 
 .searchBar {
     padding: 10px;
     width: 80%;
     max-width: 500px;
-    border: 1px solid #020202; /* Black border */
+    border: 1px solid #020202; 
     border-radius: 5px;
-    background-color: #fff; /* White background */
-    color: #020202; /* Black text color */
+    background-color: #fff; 
+    color: #020202; 
 }
 
 .searchBar::placeholder {
-    color: #7f8c8d; /* Placeholder color */
+    color: #7f8c8d; 
 }
 
 .featuredAlumni, .allAlumni {
@@ -43,7 +44,7 @@
 .featuredAlumni h2, .allAlumni h2 {
     margin-bottom: 20px;
     font-size: 2rem;
-    color: #020202; /* Crimson for headings */
+    color: #020202; 
 }
 
 .cards {
