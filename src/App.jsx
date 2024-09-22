@@ -3,6 +3,7 @@ import Layout from './Layout';
 import Home from './pages/home';
 import Login from './login';
 import Signup from './SignupPage.jsx';
+import Signup from "./SignupPage.jsx"
 import Events from './pages/Events';
 import Mentorship from './pages/Members';
 import About from './pages/About';
