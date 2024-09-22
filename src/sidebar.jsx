@@ -21,6 +21,9 @@ const Sidebar = ({ isOpen }) => {
         <div className={styles.feed}>
           <Link to="/contact" className={styles.feeda}>Contact Us</Link>
         </div>
+        <div className = {styles.feed}>
+          <Link to="/donation" className = {styles.feeda}>Donation Form</Link>
+        </div>
       </nav>
     </div>
   );

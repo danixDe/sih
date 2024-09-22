@@ -17,11 +17,11 @@ function Login() {
   const [credentials,setCredentials]=useState({user:"",email:"",password:""});
   useEffect(() => {
     if (user === 'student') {
-      studentBtn.current.style.backgroundColor = 'rgb(46, 115, 143)';
-      alumniBtn.current.style.backgroundColor = 'rgb(142, 193, 213)';
+      studentBtn.current.style.backgroundColor = 'crimson';
+      alumniBtn.current.style.backgroundColor = 'rgba(255, 58, 58, 0.759)';
     } else {
-      studentBtn.current.style.backgroundColor = 'rgb(142, 193, 213)';
-      alumniBtn.current.style.backgroundColor = 'rgb(46, 115, 143)';
+      studentBtn.current.style.backgroundColor = 'rgba(255, 58, 58, 0.759)';
+      alumniBtn.current.style.backgroundColor = 'crimson';
     }
     setCredentials({...credentials,user:user});
   }, [user]);
@@ -66,7 +66,8 @@ function Login() {
           </div>
           <button type="submit">Login</button>
         </form>
-        <Link to= '/signup' >Dont have an account? Sign up</Link>
+        <br></br>
+        <Link style={{color:'black'}} to= '/signup' >Dont have an account? Sign up</Link>
       </div>
     </div>
   );

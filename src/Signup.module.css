@@ -7,10 +7,10 @@ input,select:focus{
 }
 #signup-box input:hover{
     transform: translateY(5px);
-    border-bottom: 1.5px solid black;
+    border-bottom: 1.5px solid crimson;
 }
 #signup-box input::placeholder{
-    color: black;
+    color: gray;
     font-size: 0.78rem;
 }
 #container{
@@ -21,7 +21,7 @@ input,select:focus{
     flex-direction: column;
     overflow-y:hidden;
     padding-bottom:100px; 
-    background-color: rgb(45,45,45);
+    background-color: whitesmoke;
     width:100vw;
 }
 #signup-box{
@@ -32,17 +32,13 @@ input,select:focus{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    gap:8px;
-    background-color: transparent;  
-    backdrop-filter: blur(20px);
-    background-image: linear-gradient(120deg,
-                                        rgba(255, 255, 255, 0.9),
-                                        hsla(0, 3%, 52%, 0.4));
-    background-size: 10px;    
+    background-color:white;
+    padding-top:none;
+    box-shadow:0px 5px 35px rgba(0,0,0,0.2)
 }
 #signup-box select{
-    background-color: black;
-    color: antiquewhite;
+    background-color: crimson;
+    color: white;
     padding:3px 10px;
     cursor:pointer;
     border:none;
@@ -54,10 +50,11 @@ input,select:focus{
     backdrop-filter: blur(20px);
 }
 #heading{
-    font-weight:200;
-    font-size:4rem;
+    font-weight:500;
+    font-size:3rem;
     color: black;
-    margin: 10px 0;
+    margin-bottom:20px;
+    margin-top:none;
 }
 #signup-box code{
     color: dimgray;
@@ -86,7 +83,6 @@ input,select:focus{
     font-family: "mulish","sans-serif","arial";
     color: black;
     background-color: transparent;
-    border-radius: 10px;
     border:none;
 }
 #mail-check,#pwd-match{
@@ -116,7 +112,6 @@ input,select:focus{
     color: black;
     background-color: transparent;
     backdrop-filter: blur(20px);
-    border-radius: 10px;
 }
 #btn-box{
     width: 90%;
@@ -126,10 +121,10 @@ input,select:focus{
     padding: 10px;
 }
 #register-btn{
-    color: antiquewhite;
-    background-color: black;
+    color: white;
+    background-color: crimson;
     font-size: 1.2rem;
-    border: 1px solid black;
+    border: 1px solid crimson;
     border-radius: 10px;
     cursor: pointer;
     padding:10px 30px;
@@ -137,8 +132,8 @@ input,select:focus{
     border 0.2s ease-in, transform 0.2s ease-in;
 }
 #register-btn:hover{
-    color:black;
-    background-color: antiquewhite;
+    color: crimson;
+    background-color: black;
     border: 1px solid black;
     transform: translateY(-5px);
 }

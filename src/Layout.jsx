@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
+import { Outlet } from 'react-router-dom'; // Import Outlet for nested routes
 import Header from './header';
 import Sidebar from './sidebar';
 import styles from './layout.module.css'; 
 
-const Layout = ({ children }) => {
+const Layout = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
 
   const toggleSidebar = () => {
@@ -28,7 +29,8 @@ const Layout = ({ children }) => {
       <Header toggleSidebar={toggleSidebar} />
       <Sidebar isOpen={isSidebarOpen} />
       <main className={`${styles.content} ${isSidebarOpen ? styles.withSidebar : ''}`}>
-        {children}
+        {/* Use Outlet to render the child route components */}
+        <Outlet />
       </main>
     </div>
   );

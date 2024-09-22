@@ -9,6 +9,8 @@
     flex-direction: column;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     cursor: pointer;
+    z-index:10;
+    margin:20px;
 }
 
 .card:hover {

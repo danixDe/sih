@@ -14,6 +14,7 @@
 
 .open {
     transform: translateX(0);
+
 }
 
 .closed {
@@ -54,8 +55,4 @@
 .feed:hover .feeda {
     color:crimson;
 }
-@media (min-width: 760px) {
-    .sidebar {
-        transform: translateX(0) !important;
-    }
-}
+

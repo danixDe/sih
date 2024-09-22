@@ -7,7 +7,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 function Header({ toggleSidebar }) {
     return (
         <div className={styles.x}>
-            <div className={styles.hamburger} onClick={toggleSidebar}>
+            <div className={styles.hamburger} onMouseEnter={toggleSidebar}>
                 <FontAwesomeIcon icon={faBars} />
             </div>
 

@@ -1,17 +1,8 @@
-import { useState } from 'react';
+import {useState} from 'react';
+import { Link } from 'react-router-dom';
 import Card from '../card';
+import alumniData from '../data/alumniData'; 
 import styles from './home.module.css';
-
-const alumniData = [
-  { name: "John Snow", occupation: "Software Engineer", passoutYear: "2020" },
-  { name: "Dany", occupation: "Product Manager", passoutYear: "2019" },
-  { name: "Jaime", occupation: "Data Scientist", passoutYear: "2018" },
-  { name: "Arya", occupation: "UX Designer", passoutYear: "2017" },
-  { name: "Missandei", occupation: "Marketing Manager", passoutYear: "2016" },
-  { name: "Samwell", occupation: "HR Specialist", passoutYear: "2015" },
-  { name: "Cersei", occupation: "Financial Analyst", passoutYear: "2014" },
-  { name: "Margery", occupation: "Project Manager", passoutYear: "2013" },
-];
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -43,13 +34,14 @@ const Home = () => {
       <div className={styles.featuredAlumni}>
         <h2>Featured Alumni</h2>
         <div className={styles.cards}>
-          {alumniData.slice(0, 3).map((alumni, index) => (
-            <Card
-              key={index}
-              name={alumni.name}
-              occupation={alumni.occupation}
-              passoutYear={alumni.passoutYear}
-            />
+          {alumniData.slice(0, 3).map((alumni) => (
+            <Link style={{textDecoration:'none'}} to={`/profile/${alumni.id}`} key={alumni.id}>
+              <Card
+                name={alumni.name}
+                occupation={alumni.occupation}
+                passoutYear={alumni.passoutYear}
+              />
+            </Link>
           ))}
         </div>
       </div>
@@ -58,13 +50,14 @@ const Home = () => {
         <h2>All Alumni</h2>
         <div className={styles.cards}>
           {filteredAlumni.length > 0 ? (
-            filteredAlumni.map((alumni, index) => (
-              <Card
-                key={index}
-                name={alumni.name}
-                occupation={alumni.occupation}
-                passoutYear={alumni.passoutYear}
-              />
+            filteredAlumni.map((alumni) => (
+              <Link style={{textDecoration:'none'}} to={`/profile/${alumni.id}`} key={alumni.id}>
+                <Card
+                  name={alumni.name}
+                  occupation={alumni.occupation}
+                  passoutYear={alumni.passoutYear}
+                />
+              </Link>
             ))
           ) : (
             <p>No alumni found matching your search criteria.</p>

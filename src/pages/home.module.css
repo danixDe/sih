@@ -32,22 +32,26 @@
     background-color: #fff; 
     color: #020202; 
 }
+input:focus-visible{
+    border:2px solid black;
+}
 
 .searchBar::placeholder {
     color: #7f8c8d; 
 }
 
 .featuredAlumni, .allAlumni {
-    margin-top: 40px;
+    margin-top: 20px;
+    z-index:0;
 }
 
 .featuredAlumni h2, .allAlumni h2 {
-    margin-bottom: 20px;
+    margin-bottom:20px;
     font-size: 2rem;
     color: #020202; 
 }
 
-.cards {
+.cards{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
