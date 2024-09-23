@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './pages.css';
-
+import { useNavigate } from 'react-router-dom';
 const alumniList = [
     { id: 1, name: "John Snow", occupation: "Software Engineer" },
     { id: 2, name: "Dany", occupation: "Product Manager" },
@@ -12,9 +12,10 @@ const alumniList = [
 const Mentorship = () => {
     const [selectedAlumni, setSelectedAlumni] = useState(null);
     const [message, setMessage] = useState("");
-
+    const navigate=useNavigate();
     const handleAlumniClick = (alumni) => {
         setSelectedAlumni(alumni);
+        navigate("/chatbox",{state:alumni});
     };
 
     const handleMessageChange = (e) => {

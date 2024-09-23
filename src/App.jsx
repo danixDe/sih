@@ -9,6 +9,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import DonationForm from './pages/DonationForm.jsx';
 import Profile from './pages/Profile';  
+import Chatbox from './pages/Chatbox.jsx';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/donation" element={<DonationForm />} />
           <Route path="/profile/:id" element={<Profile />} /> 
+          <Route path="chatbox" element={<Chatbox/>}/>
         </Route>
       </Routes>
     </Router>

@@ -1,0 +1,90 @@
+/* ChatBox.css */
+
+/* Container for the entire chat box */
+.chat-box {
+    width: 400px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    position: absolute;
+    top: 100px;
+  }
+  
+  /* Chat messages area (scrollable) */
+  .chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  /* Individual message styling */
+  .message {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+  
+  /* Different styles for student and alumni messages */
+  .student {
+    background-color: #daf8e3;
+    align-self: flex-end;
+  }
+  
+  .alumni {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+  }
+  
+  /* Chat input area */
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Input field for typing messages */
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  /* Send button */
+  .chat-input button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .chat-input button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Scrollbar styling for the chat messages area */
+  .chat-messages::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .chat-messages::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+  
