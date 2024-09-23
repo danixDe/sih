@@ -1,5 +1,4 @@
 import  styles from"./Signup.module.css";
-// import axios from "axios";
 import { useState,useEffect,useRef } from "react";
 import { useNavigate } from "react-router-dom";
 function SignupPage(){
@@ -84,10 +83,10 @@ function SignupPage(){
             <br /><br></br>
             <div id={styles["signup-box"]}>
             <h1 id={styles["heading"]}>SignUp</h1>
-            <br></br>
                 <code>
                     /fill this form up to register/
                 </code>
+                <br></br>
                 <div id={styles["userselectbox"]}>
                     <button
                         id={styles["studentBtn"]}

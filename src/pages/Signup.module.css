@@ -84,6 +84,8 @@ input,select:focus{
     color: black;
     background-color: transparent;
     border:none;
+    border-bottom:1px solid black;
+
 }
 #alumni{
     width:85%;
